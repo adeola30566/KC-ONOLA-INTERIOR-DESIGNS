@@ -3,81 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KC ONOLA INTERIOR DESIGNS</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .content {
-            padding: 3rem 0;
-            text-align: center;
-        }
-        
-        .content h2 {
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-        
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-    </style>
+    <title>KC Onola Interior Design - Professional Design Services</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="container">
-            <h1>KC ONOLA INTERIOR DESIGNS</h1>
-            <p>Transform Your Space with Elegant Design</p>
+            <div class="nav-brand">KC Onola Interior Design</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </header>
-    
-    <div class="container">
-        <div class="content">
-            <h2>Welcome to Our Interior Design Studio</h2>
-            <p>We create beautiful, functional spaces that reflect your style and personality.</p>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Space</h1>
+            <p>Professional Interior Design Services for Modern Living</p>
+            <button class="cta-btn">Get Started</button>
         </div>
-    </div>
-    
-    <footer>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <p>&copy; 2026 KC ONOLA INTERIOR DESIGNS. All rights reserved.</p>
+            <h2>About Us</h2>
+            <p>KC Onola Interior Design specializes in creating beautiful, functional spaces that reflect your personal style and enhance your lifestyle. With years of experience and a passion for design, we bring your vision to life.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Residential Design</h3>
+                    <p>Create stunning living spaces tailored to your lifestyle and preferences.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Commercial Design</h3>
+                    <p>Professional spaces that enhance productivity and brand identity.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Space Planning</h3>
+                    <p>Maximize functionality and flow in any room with expert planning.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Color Consultation</h3>
+                    <p>Perfect color schemes that bring harmony and balance to your space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Recent Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">Project 1</div>
+                    <h3>Modern Living Room</h3>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">Project 2</div>
+                    <h3>Contemporary Kitchen</h3>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">Project 3</div>
+                    <h3>Elegant Bedroom</h3>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">Project 4</div>
+                    <h3>Office Space Design</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p>Email: info@kconola.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Design Street, Creative City, CC 12345</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 KC Onola Interior Design. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
