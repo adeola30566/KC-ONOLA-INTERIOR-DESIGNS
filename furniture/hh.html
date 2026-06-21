@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> KC ONOLA Luxury Interior Design</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="logo">KC ONALA INTERIORS DESIGN</div>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>KC ONOLA Interior Design</h1>
+        <p>Creating beautiful and functional living spaces.</p>
+        <button class="btn" onclick="showMessage()">Book Consultation</button>
+    </div>
+</section>
+<section id="about">
+    <h2 class="section-title">About Us</h2>
+
+    <div class="about">
+        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800" alt="Interior">
+
+        <div>
+            <h3>About Us</h3>
+            <br>
+            <p>
+                CEO:Kazeem Ashimi <br>,
+                <br>
+                We transform homes, offices, and commercial spaces into
+                stunning environments that combine elegance, comfort,
+                and functionality. Our experienced designers create
+                unique interiors tailored to your lifestyle.
+            </p>
+            <br><br>
+            <h3>LOCATION</h3>
+            <br>
+            <p>
+                Shop 57, 10,Shagari shopping Complex,,<br>Pako Bus Stop,Ipaja Road,<br>Alimosho Lagos State
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2 class="section-title">Our Projects</h2>
+
+    <div class="gallery">
+        <img src="image.png">
+        <img src="download.jfif">
+        <img src="download (1).jfif">
+        <img src="download (2).jfif">
+        <img src="download (3).jfif">
+        <img src="download (4).jfif">
+        <img src="download (5).jfif">
+        <img src="download (6).jfif">
+        <img src="download (7).jfif">
+        <img src="download (8).jfif">
+        <img src="download (9).jfif">
+        <img src="download (10).jfif">
+        <img src="image copy 3.png">
+        <img src="image copy 2.png">
+        <img src="image copy.png">
+    </div>
+</section>
+
+<section id="services">
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="services">
+        <div class="card">
+            <h3>Residential Design</h3>
+            <p>Modern and luxurious home interiors.</p>
+        </div>
+
+        <div class="card">
+            <h3>Office Design</h3>
+            <p>Creative workspaces that inspire productivity.</p>
+        </div>
+
+        <div class="card">
+            <h3>Space Planning</h3>
+            <p>Optimizing every inch of your space.</p>
+        </div>
+    
+            <div class="card">
+                <h3>Wardrobe Design</h3>
+                <p>Custom luxury wardrobes.</p>
+            </div>
+
+            <div class="card">
+                <h3>Bedroom Design</h3>
+                <p>Modern bed and room solutions.</p>
+            </div>
+
+            <div class="card">
+                <h3>TV Console Design</h3>
+                <p>Elegant media wall concepts.</p>
+            </div>
+
+            <div class="card">
+                <h3>Furniture Selection</h3>
+                <p>Chairs, shelves and center tables.</p>
+            </div>
+            <div class="card">
+                <h3>Hotel Works</h3>
+                <p>Chairs, shelves and center tables.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact">
+        <form id="contactForm">
+            <div class="contact">
+
+            <p class="phone">
+                📞 08057793927,08029976546
+            </p>
+            <p style="margin-bottom:10px; margin: auto;">
+                ✉️ ashimisamad66@gmail.com
+            </p>
+
+            
+            </form>
+
+        </div>
+            <input type="text" placeholder="Your Name" required>
+            <br>
+
+            <input type="email" placeholder="Your Email" required>
+            <br>
+
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <br>
+
+            <button class="btn" type="submit">Send Message</button>
+            <button> <a href="https://wa.me/2348057793927" class="ss" target="_blank">
+        WhatsApp Us +2348057793927
+    </a> </button>
+            
+    
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© KC ONOLA 2026 InteriorLux. All Rights Reserved.</p>
+</footer>
+<script>
+    
+function showMessage() {
+    alert("Thank you for your interest! Our design team will contact you soon.");
+}
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Message sent successfully!");
+    this.reset();
+});
+</script>
+
+
+</body>
+</html>
