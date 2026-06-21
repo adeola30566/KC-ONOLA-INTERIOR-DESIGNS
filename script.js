@@ -1,42 +1,45 @@
-// Mobile Menu Toggle
+// Mobile menu toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
 if (hamburger) {
     hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
+        navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
     });
 }
 
-// Close menu when a link is clicked
+// Smooth scrolling for navigation links
 const navLinks = document.querySelectorAll('.nav-menu a');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
-    });
-});
 
-// Smooth Scrolling for Navigation Links
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-        if (href.startsWith('#')) {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+            if (navMenu.style.display === 'flex') {
+                navMenu.style.display = 'none';
             }
         }
     });
 });
 
-// CTA Button Click Handler
+// Contact form handling
+const contactForm = document.querySelector('.contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for your message! We will get back to you soon.');
+        contactForm.reset();
+    });
+}
+
+// CTA button click
 const ctaBtn = document.querySelector('.cta-btn');
+
 if (ctaBtn) {
     ctaBtn.addEventListener('click', () => {
         const contactSection = document.querySelector('#contact');
@@ -46,85 +49,12 @@ if (ctaBtn) {
     });
 }
 
-// Contact Form Submission
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(contactForm);
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const message = contactForm.querySelector('textarea').value;
-        
-        // Basic validation
-        if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
-            alert('Please fill in all fields.');
-            return;
-        }
-        
-        // Show success message
-        alert(`Thank you, ${name}! Your message has been sent. We'll get back to you soon.`);
-        
-        // Reset form
-        contactForm.reset();
-    });
-}
-
-// Scroll Animation for Sections
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe service cards and portfolio items
-const serviceCards = document.querySelectorAll('.service-card');
-const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-serviceCards.forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    observer.observe(card);
-});
-
-portfolioItems.forEach(item => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateY(20px)';
-    item.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    observer.observe(item);
-});
-
-// Add active state to navigation based on scroll position
+// Add scroll effect to navbar
 window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('section');
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 100) {
+        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+    } else {
+        navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+    }
 });
-
-// Console log for debugging
-console.log('KC Onola Interior Design website loaded successfully!');
